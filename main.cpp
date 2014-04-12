@@ -48,7 +48,7 @@ class DemoWindow : public QWidget
 public:
     DemoWindow() : QWidget()
     {
-	setFixedSize(600, 420);
+        setFixedSize(1366,768);
     }
 
 protected:
@@ -56,13 +56,13 @@ protected:
     {
         if (e->key() == Qt::Key_Q)
         {
-		QApplication::instance()->quit();
+		    QApplication::instance()->quit();
         }
     }
 
     virtual void closeEvent( QCloseEvent * )
     {
-	    QApplication::instance()->quit();
+	        QApplication::instance()->quit();
     }
 };
 
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
 
     if ( demoWidget )
     {
-        demoWidget->setFixedSize( 600, 420 );
+        demoWidget->setFixedSize(1366,768);
         demoWidget->show();
     }
     app.exec();

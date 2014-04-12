@@ -63,8 +63,8 @@ KScreenSaver::KScreenSaver( WId id ) : QWidget()
         create( id, false, true );
     }
 
-    if ( w == 0 ) w = 600;
-    if ( h == 0 ) h = 420;
+    if ( w == 0 ) w = 1366;
+    if ( h == 0 ) h = 768;
     resize( w, h );
     QApplication::sendPostedEvents();
     show();
