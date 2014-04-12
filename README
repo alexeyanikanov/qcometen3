@@ -1,0 +1,41 @@
+KCometen3 is a popular KDE screensaver hosted on KDE-look.org. QCometen3
+is a port of it to to Qt4. It doesn't depend on any KDE version, but
+should work in both KDE3 and KDE4. With some tinkering, it may work in
+Xscreensaver and gnome-screensaver too.
+
+Unfortunately, QCometen3 doesn't come with a setup dialog. However, if
+you used KCometen3 before, QCometen3 can read its config files. If not,
+you'll have to create a config file in ~/.config/QCometen3.conf manually.
+(See default values at the bottom of the README.)
+
+KCometen3 is by Peter Mueller <pmueller@cs.tu-berlin.de>. It was ported
+to Qt4 by Tomi Belan <tomi.belan@gmail.com>.
+
+To build and install QCometen3:
+(You won't need any KDE libs, Qt4 is enough.)
+$ qmake (regenerates Makefile from qcometen3.pro; optional)
+$ make
+$ install -p -m 755 qcometen3 /usr/bin/qcometen3
+KDE3: $ install -p -m 644 kde3-qcometen3.desktop /usr/share/applnk/System/ScreenSavers/qcometen3.desktop
+KDE4: $ install -p -m 644 kde4-qcometen3.desktop /usr/share/kde4/services/ScreenSavers/qcometen3.desktop
+
+Sample config file ~/.config/QCometen3.conf (with default values):
+
+[Settings]
+bgdir=
+bgfile=
+bgsize=2
+bgtype=0
+color=0
+curvecomet=true
+freecamera=true
+freecamspeed=1.5
+interval=1.25
+lightning=true
+matrix=true
+maxfps=1000
+rotatecomet=true
+sizescale=2.5
+slowmotion=true
+splitcomet=true
+timescale=1
